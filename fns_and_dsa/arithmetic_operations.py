@@ -1,28 +1,13 @@
-#!/usr/bin/env python3
-
-def perform_operation(num1: float, num2: float, operation: str):
-    """
-    Perform a basic arithmetic operation.
-
-    Parameters:
-        num1 (float): first number
-        num2 (float): second number
-        operation (str): 'add', 'subtract', 'multiply', or 'divide'
-
-    Returns:
-        float | str: numeric result, or an error message string if division by zero
-                     or invalid operation.
-    """
-    op = operation.strip().lower()
-    if op == "add":
+def perform_operation(num1, num2, operation):
+    if operation == "add":
         return num1 + num2
-    elif op == "subtract":
+    elif operation == "subtract":
         return num1 - num2
-    elif op == "multiply":
+    elif operation == "multiply":
         return num1 * num2
-    elif op == "divide":
+    elif operation == "divide":
         if num2 == 0:
-            return "Error: Division by zero is not allowed"
+            return "Error: Division by zero"
         return num1 / num2
     else:
         return "Error: Invalid operation"
